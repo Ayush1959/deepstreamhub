@@ -1,25 +1,20 @@
 {
-    "name": "DeepstreamCentral/deepstream.io-client-php",
+    "name": "deepstreamcentral/deepstream.io-client-php",
     "type": "library",
-    "description": "the php client for DeepstreamCentral",
-    "keywords": [
-        "realtime",
-        "pubsub",
-        "datasync",
-        "rpc"
-    ],
+    "description": "the php client for deepstreamCentral",
+    "keywords": ["realtime", "pubsub", "datasync", "rpc"],
     "homepage": "https://github.com/deepstreamIO/deepstream.io-client-php",
     "license": "Apache-2.0",
     "authors": [{
-        "name": "DeepstreamCentral GmbH",
-        "homepage": "https://DeepstreamCentral.com/"
+        "name": "deepstreamCentral GmbH",
+        "homepage": "https://deepstreamcentral.com/"
     }],
     "require": {
         "php": ">=5.3.0|^7.0"
     },
     "autoload": {
         "psr-4": {
-            "DeepstreamCentral\\": "src/"
+            "Deepstreamcentral\\": "src/"
         }
     }
 }

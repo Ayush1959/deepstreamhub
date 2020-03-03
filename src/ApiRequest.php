@@ -1,12 +1,12 @@
 <?php
 
-namespace DeepstreamCentral;
+namespace Deepstreamcentral;
 
 /**
  * A class representing a single API request
  *
- * @author DeepstreamCentral GmbH <info@DeepstreamCentral.com>
- * @copyright (c) 2017, DeepstreamCentral GmbH
+ * @author deepstreamCentral GmbH <info@deepstreamcentral.com>
+ * @copyright (c) 2017, deepstreamCentral GmbH
  */
 class ApiRequest
 {

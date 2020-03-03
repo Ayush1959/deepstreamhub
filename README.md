@@ -66,7 +66,7 @@ Creates the deepstream client
 
 ```php
 $client = new DeepstreamClient(
-  'https://api.DeepstreamCentral.com/api/v1',
+  'https://api.deepstreamcentral.com/api/v1',
   array(
     'token' => 'xxxx-xxxx-xxxx-xxxx'
   )

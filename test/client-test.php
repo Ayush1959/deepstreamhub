@@ -1,5 +1,5 @@
 <?php
-use DeepstreamCentral\DeepstreamClient;
+use Deepstreamcentral\DeepstreamClient;
 use PHPUnit\Framework\TestCase;
 
 define('API_URL', 'http://localhost:8000/api/v1');

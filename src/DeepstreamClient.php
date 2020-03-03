@@ -1,5 +1,5 @@
 <?php
-namespace DeepstreamCentral;
+namespace Deepstreamcentral;
 
 include 'ApiRequest.php';
 define('SUCCESS_RESPONSE', 'SUCCESS');
@@ -8,8 +8,8 @@ define('SUCCESS_RESPONSE', 'SUCCESS');
  * The deepstream PHP client running against the dsh/dsx
  * HTTP API
  *
- * @author DeepstreamCentral GmbH <info@DeepstreamCentral.com>
- * @copyright (c) 2017, DeepstreamCentral GmbH
+ * @author deepstreamCentral GmbH <info@deepstreamcentral.com>
+ * @copyright (c) 2017, deepstreamCentral GmbH
  */
 class DeepstreamClient
 {
