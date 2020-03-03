@@ -1,5 +1,5 @@
 {
-    "name": "deepstreamcentral/deepstream.io-client-php",
+    "name": "deepstreamcentral",
     "type": "library",
     "description": "the php client for deepstreamCentral",
     "keywords": ["realtime", "pubsub", "datasync", "rpc"],
