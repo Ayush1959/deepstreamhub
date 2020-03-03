@@ -1,14 +1,15 @@
 <?php
 
-namespace Deepstreamhub;
+namespace deepstream;
 
 /**
  * A class representing a single API request
  *
- * @author deepstreamHub GmbH <info@deepstreamhub.com>
- * @copyright (c) 2017, deepstreamHub GmbH
+ * @author deepstream GmbH <info@deepstream.com>
+ * @copyright (c) 2017, deepstream GmbH
  */
-class ApiRequest {
+class ApiRequest
+{
     private $requestData;
     private $url;
 
@@ -18,7 +19,8 @@ class ApiRequest {
      * @param string $url
      * @param mixed $authData
      */
-    public function __construct( $url, $authData ) {
+    public function __construct($url, $authData)
+    {
         $this->url = $url;
         $this->requestData = $authData;
         $this->requestData['body'] = array();
@@ -32,8 +34,9 @@ class ApiRequest {
      * @private
      * @returns void
      */
-    public function add( $request ) {
-        array_push( $this->requestData['body'], $request );
+    public function add($request)
+    {
+        array_push($this->requestData['body'], $request);
     }
 
     /**
@@ -42,7 +45,8 @@ class ApiRequest {
      * @private
      * @return mixed result data
      */
-    public function execute() {
+    public function execute()
+    {
         // $options = array(
         //     'http' => array(
         //         'header'  => "Content-type: application/json\r\n",
@@ -56,22 +60,22 @@ class ApiRequest {
 
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+        curl_setopt($ch, CURLOPT_AUTOREFERER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode( $this->requestData, JSON_UNESCAPED_SLASHES ));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($this->requestData, JSON_UNESCAPED_SLASHES));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_URL, $this->url);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);    
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
         $result = curl_exec($ch);
 
         curl_close($ch);
 
-        if( $result === false ) {
+        if ($result === false) {
             return false;
         } else {
-            return json_decode( $result );
+            return json_decode($result);
         }
     }
 }
